@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone | Video</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/youtube-icon.png" />
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/videoPage.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header" id="header">
+      <div class="container-fluid">
+        <nav class="header__nav" id="header__nav">
+          <div class="header__nav-left">
+            <button>
+              <i class="bars-icon far fa-bars"></i>
+            </button>
+            <a href="index.html" class="header__logo"> YouTube </a>
+          </div>
+          <div class="header__nav-center">
+            <input type="search" class="search-input" placeholder="Search" />
+            <button class="search-btn">
+              <i class="search-icon far fa-search"></i>
+              <span class="tooltip search">Search</span>
+            </button>
+            <button class="microphone-btn">
+              <i class="microphone-icon fal fa-microphone"></i>
+              <span class="tooltip mic">Search with your voice</span>
+            </button>
+          </div>
+          <div class="header__nav-right">
+            <button class="video-btn">
+              <i class="video-icon fas fa-video-plus"></i>
+              <span class="tooltip video">Create</span>
+            </button>
+            <button class="dots-btn">
+              <i class="th-icon fas fa-th"></i>
+              <span class="tooltip apps">YouTube apps</span>
+            </button>
+            <button class="bell-btn">
+              <i class="bell-icon fas fa-bell"></i>
+              <span class="tooltip bell">Notifications</span>
+            </button>
+            <button class="profile-btn">
+              <img class="profile-img" src="img/admin.PNG" alt="profile-img" />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <main class="main" id="main">
+      <!-- video start -->
+      <section class="video" id="video">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="video__self">
+                <iframe
+                  width="100%"
+                  src="https://www.youtube.com/embed/2LhoCfjm8R4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="video__desc">
+                <h3 class="video__desc-title">
+                  Data Visualization with D3, JavaScript, React - Full Course
+                  [2021]
+                </h3>
+                <div class="video__btn-group">
+                  <span class="video__views">
+                    121,303 views <span class="video__date"></span> 22 Feb 2021
+                  </span>
+                  <div class="video__buttons">
+                    <div class="video__emotions">
+                      <button class="video__btn">
+                        <i class="fas fa-thumbs-up"></i>
+                        <span class="video__like-number">4.9k</span>
+                        <span class="tooltip"> I like this </span>
+                      </button>
+                      <button class="video__btn">
+                        <i class="fas fa-thumbs-down"></i>
+                        <span class="video__disLike-number">20</span>
+                        <span class="tooltip"> I dislike this </span>
+                      </button>
+                    </div>
+                    <div class="video__icons">
+                      <button class="video__btn">
+                        <i class="far fa-cut"> </i>
+                        <span class="video__clip">Clip</span>
+                        <span class="tooltip"> Clip </span>
+                      </button>
+                      <button class="video__btn">
+                        <i class="fas fa-share"> </i>
+                        <span class="video__share">Share</span>
+                        <span class="tooltip"> Share </span>
+                      </button>
+                      <button class="video__btn">
+                        <div>
+                          <i class="fas fa-save"></i>
+                          <span class="video__save">Save</span>
+                          <span class="tooltip"> Save </span>
+                        </div>
+                      </button>
+                      <button class="video__btn">
+                        <i class="far fa-ellipsis-h"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="video__profile">
+                <div class="video__profile-self">
+                  <img
+                    class="video__profile-img"
+                    src="img/profile-img.jpg"
+                    alt=""
+                  />
+                  <div class="video__profile-text">
+                    <h5 class="video__profile-title">freeCodeCamp</h5>
+                    <p class="video__profile-owner">4M subscribers</p>
+                  </div>
+                </div>
+                <div class="video__profile-btn">
+                  <button
+                    id="bellBtn"
+                    onclick="showHideSubs()"
+                    class="subscribe"
+                  >
+                    Subscribe
+                  </button>
+                  <div id="bell" class="bell">
+                    <i class="far fa-bell"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="video__info">
+                <p class="video__info-text">Master CSS Flexbox from scratch.</p>
+                <p class="video__info-text">
+                  ✏️ Course created by DevArsenal Official. Check out their
+                  channel:
+                </p>
+                <button class="video__info-btn">Show more</button>
+              </div>
+              <div class="video__comment">
+                <div class="video__comment-number">
+                  <span class="video__comment-count"> 145 Comments </span>
+                  <span class="video__comment-sort">
+                    <i class="fal fa-signal-3"></i>
+                    sort by
+                  </span>
+                </div>
+                <div class="video__comment-add">
+                  <img
+                    src="img/user.jpg"
+                    alt="user photo"
+                    class="video__commment-user"
+                  />
+                  <div class="video__commment-buttons">
+                    <input
+                      onchange="changeBtnColor()"
+                      onclick="commentBtn()"
+                      id="video__comment-input"
+                      type="text"
+                      class="video__comment-input"
+                      placeholder="Add a public comment..."
+                    />
+                  </div>
+                </div>
+                <div class="video__comment-btns">
+                  <button
+                    id="video__comment-cancel"
+                    class="video__comment-cancel"
+                  >
+                    cancel
+                  </button>
+                  <button id="video__comment-send" class="video__comment-send">
+                    comment
+                  </button>
+                </div>
+                <div class="video__comment-info">
+                  <div class="video__comment-pinned">
+                    <img
+                      src="img/profile-img.jpg"
+                      alt="user photo"
+                      class="video__commment-user"
+                    />
+                    <div class="video__comment-profile">
+                      <span>
+                        <i class="fas fa-thumbtack"></i>
+                      </span>
+                      <span> Pinned by freeCodeCamp.org </span>
+                      <p class="video__comment-logo">
+                        <span
+                          >freeCodeCamp.org <i class="fas fa-check-circle"></i
+                        ></span>
+                        <span>1 year ago</span>
+                      </p>
+                      <p class="video__comment-text">
+                        Click the "JOIN" button below the video to support
+                        <a href="#">freeCodeCamp.org!</a>
+                      </p>
+                      <div class="video__buttons" id="video__comment-reactions">
+                        <button class="video__btn" id="comment-btn">
+                          <i class="fas fa-thumbs-up"></i>
+                          <span class="video__like-number">404</span>
+                          <span class="tooltip like">Like</span>
+                        </button>
+                        <button class="video__btn" id="comment-btn">
+                          <i class="fas fa-thumbs-down"></i>
+                          <span class="video__like-number"></span>
+                          <span class="tooltip dislike">Dislike</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video__comment-replies">
+                    <button>
+                      <i class="fas fa-caret-down"></i>
+                      <span class="video__comment-views">
+                        View 24 replies
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="video__recommend">
+                <a href="#" class="video__recommend-link">
+                  <img
+                    class="video__recommend-img"
+                    src="img/freecodecamp.jpeg"
+                    alt="recommended video"
+                /></a>
+                <div class="video__recommend-text">
+                  <h3 class="video__recommend-title">
+                    5 Problem Solving Tips for Cracking Coding Interview
+                    Questions
+                  </h3>
+                  <p class="video__recommend-profile">
+                    CS Dojo <i class="fas fa-check-circle"></i>
+                  </p>
+                  <div class="video__recommend-views">
+                    <span class="video__recommend-number">1,032,472 views</span>
+                    <span class="video__recommend-date">11 Feb 2019</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video__recommend">
+                <a href="#" class="video__recommend-link">
+                  <img
+                    class="video__recommend-img"
+                    src="img/freecodecamp.jpeg"
+                    alt="recommended video"
+                /></a>
+                <div class="video__recommend-text">
+                  <h3 class="video__recommend-title">
+                    5 Problem Solving Tips for Cracking Coding Interview
+                    Questions
+                  </h3>
+                  <p class="video__recommend-profile">
+                    CS Dojo <i class="fas fa-check-circle"></i>
+                  </p>
+                  <div class="video__recommend-views">
+                    <span class="video__recommend-number">1,032,472 views</span>
+                    <span class="video__recommend-date">11 Feb 2019</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video__recommend">
+                <a href="#" class="video__recommend-link">
+                  <img
+                    class="video__recommend-img"
+                    src="img/freecodecamp.jpeg"
+                    alt="recommended video"
+                /></a>
+                <div class="video__recommend-text">
+                  <h3 class="video__recommend-title">
+                    5 Problem Solving Tips for Cracking Coding Interview
+                    Questions
+                  </h3>
+                  <p class="video__recommend-profile">
+                    CS Dojo <i class="fas fa-check-circle"></i>
+                  </p>
+                  <div class="video__recommend-views">
+                    <span class="video__recommend-number">1,032,472 views</span>
+                    <span class="video__recommend-date">11 Feb 2019</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video__recommend">
+                <a href="#" class="video__recommend-link">
+                  <img
+                    class="video__recommend-img"
+                    src="img/freecodecamp.jpeg"
+                    alt="recommended video"
+                /></a>
+                <div class="video__recommend-text">
+                  <h3 class="video__recommend-title">
+                    5 Problem Solving Tips for Cracking Coding Interview
+                    Questions
+                  </h3>
+                  <p class="video__recommend-profile">
+                    CS Dojo <i class="fas fa-check-circle"></i>
+                  </p>
+                  <div class="video__recommend-views">
+                    <span class="video__recommend-number">1,032,472 views</span>
+                    <span class="video__recommend-date">11 Feb 2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- video end -->
+    </main>
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- main js -->
+    <script src="js/script.js"></script>
+    <script src="js/video.js"></script>
+  </body>
+</html>

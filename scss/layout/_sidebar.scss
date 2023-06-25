@@ -1,0 +1,48 @@
+.sidenav {
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 75px;
+  padding-top: 8px;
+  z-index: 1;
+  background: $secondaryBgColor;
+  @include flex;
+  justify-content: unset;
+  height: 100%;
+}
+
+.sidenav__home-btn,
+.sidenav__explore-btn,
+.sidenav__subs-btn,
+.sidenav__library-btn {
+  padding: 15px 5px;
+  font-size: 21px;
+  @include flex;
+  justify-content: unset;
+  width: inherit;
+}
+
+.sidenav__home-btn:hover,
+.sidenav__explore-btn:hover,
+.sidenav__subs-btn:hover,
+.sidenav__library-btn:hover {
+  background: #ffffff1a;
+}
+
+.home-icon.active,
+.btn-description.active {
+  color: #ffffff;
+}
+
+.home-icon,
+.explore-icon,
+.subs-icon,
+.library-icon {
+  color: $iconMainColor;
+  margin-bottom: 12px;
+}
+
+.btn-description {
+  font-size: 9px;
+  color: $iconMainColor;
+}

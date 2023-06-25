@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/youtube-icon.png" />
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header" id="header">
+      <div class="container-fluid">
+        <nav class="header__nav" id="header__nav">
+          <div class="header__nav-left">
+            <button>
+              <i class="bars-icon far fa-bars"></i>
+            </button>
+            <a href="index.html" class="header__logo">
+              YouTube
+            </a>
+          </div>
+          <div class="header__nav-center">
+            <input type="search" class="search-input" placeholder="Search" />
+            <button class="search-btn">
+              <i class="search-icon far fa-search"></i>
+              <span class="tooltip search">Search</span>
+            </button>
+            <button class="microphone-btn">
+              <i class="microphone-icon fal fa-microphone"></i>
+              <span class="tooltip mic">Search with your voice</span>
+            </button>
+          </div>
+          <div class="header__nav-right">
+            <button class="video-btn">
+              <i class="video-icon fas fa-video-plus"></i>
+              <span class="tooltip video">Create</span>
+            </button>
+            <button class="dots-btn">
+              <i class="th-icon fas fa-th"></i>
+              <span class="tooltip apps">YouTube apps</span>
+            </button>
+            <button class="bell-btn">
+              <i class="bell-icon fas fa-bell"></i>
+              <span class="tooltip bell" id="tooltip-bell">Notifications</span>
+            </button>
+            <button class="profile-btn">
+              <img class="profile-img" src="img/admin.PNG" alt="profile-img" />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <main class="main">
+      <!-- aside start -->
+      <aside class="sidenav">
+        <button class="sidenav__home-btn" title="Home">
+          <i class="home-icon active fas fa-home-alt"></i>
+          <span class="btn-description active">Home</span>
+        </button>
+        <button class="sidenav__explore-btn" title="Explore">
+          <i class="explore-icon fas fa-compass"></i>
+          <span class="btn-description">Explore</span>
+        </button>
+        <button class="sidenav__subs-btn" title="Subscriptions">
+          <i class="subs-icon fab fa-google-play"></i>
+          <span class="btn-description">Subscriptions</span>
+        </button>
+        <button class="sidenav__library-btn" title="Library">
+          <i class="library-icon fab fa-youtube"></i>
+          <span class="btn-description">Library</span>
+        </button>
+      </aside>
+      <!-- aside end -->
+      
+      <!-- videos start -->
+      <section class="videos">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="video__self">
+                <a
+                  href="video.html"
+                  class="video__link"
+                >
+                  <img class="videos__self-img" src="img/video1.jpg" alt="" />
+                </a>
+                <div class="video__desc">
+                  <img class="video__img" src="img/video__img.jpg" alt="" />
+                  <div class="video__text">
+                    <h5 class="video__title">
+                      Responsive Website Design Using HTML CSS And..
+                    </h5>
+                    <p class="video__owner">Bendicom</p>
+                    <span class="video__views"> 233K views 1 month ago </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="video__self">
+                <a
+                  href="video.html"
+                  class="video__link"
+                >
+                  <img class="videos__self-img" src="img/video1.jpg" alt="" />
+                </a>
+                <div class="video__desc">
+                  <img class="video__img" src="img/video__img.jpg" alt="" />
+                  <div class="video__text">
+                    <h5 class="video__title">
+                      Responsive Website Design Using HTML CSS And..
+                    </h5>
+                    <p class="video__owner">Bendicom</p>
+                    <span class="video__views"> 233K views 1 month ago </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="video__self">
+                <a
+                  href="video.html"
+                  class="video__link"
+                >
+                  <img class="videos__self-img" src="img/video1.jpg" alt="" />
+                </a>
+                <div class="video__desc">
+                  <img class="video__img" src="img/video__img.jpg" alt="" />
+                  <div class="video__text">
+                    <h5 class="video__title">
+                      Responsive Website Design Using HTML CSS And..
+                    </h5>
+                    <p class="video__owner">Bendicom</p>
+                    <span class="video__views"> 233K views 1 month ago </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="video__self">
+                <a
+                  href="video.html"
+                  class="video__link"
+                >
+                  <img class="videos__self-img" src="img/video1.jpg" alt="" />
+                </a>
+                <div class="video__desc">
+                  <img class="video__img" src="img/video__img.jpg" alt="" />
+                  <div class="video__text">
+                    <h5 class="video__title">
+                      Responsive Website Design Using HTML CSS And..
+                    </h5>
+                    <p class="video__owner">Bendicom</p>
+                    <span class="video__views"> 233K views 1 month ago </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="video__self">
+                <a
+                  href="video.html"
+                  class="video__link"
+                >
+                  <img class="videos__self-img" src="img/video1.jpg" alt="" />
+                </a>
+                <div class="video__desc">
+                  <img class="video__img" src="img/video__img.jpg" alt="" />
+                  <div class="video__text">
+                    <h5 class="video__title">
+                      Responsive Website Design Using HTML CSS And..
+                    </h5>
+                    <p class="video__owner">Bendicom</p>
+                    <span class="video__views"> 233K views 1 month ago </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="video__self">
+                <a
+                  href="video.html"
+                  class="video__link"
+                >
+                  <img class="videos__self-img" src="img/video1.jpg" alt="" />
+                </a>
+                <div class="video__desc">
+                  <img class="video__img" src="img/video__img.jpg" alt="" />
+                  <div class="video__text">
+                    <h5 class="video__title">
+                      Responsive Website Design Using HTML CSS And..
+                    </h5>
+                    <p class="video__owner">Bendicom</p>
+                    <span class="video__views"> 233K views 1 month ago </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- videos end -->
+    </main>
+
+
+
+
+
+
+
+
+
+    
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- main js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

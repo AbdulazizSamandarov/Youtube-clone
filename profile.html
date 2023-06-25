@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone | Profile</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/youtube-icon.png" />
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header" id="header">
+      <div class="container-fluid">
+        <nav class="header__nav" id="header__nav">
+          <div class="header__nav-left">
+            <button>
+              <i class="bars-icon far fa-bars"></i>
+            </button>
+            <a href="index.html" class="header__logo"> YouTube </a>
+          </div>
+          <div class="header__nav-center">
+            <input type="search" class="search-input" placeholder="Search" />
+            <button class="search-btn">
+              <i class="search-icon far fa-search"></i>
+              <span class="tooltip search">Search</span>
+            </button>
+            <button class="microphone-btn">
+              <i class="microphone-icon fal fa-microphone"></i>
+              <span class="tooltip mic">Search with your voice</span>
+            </button>
+          </div>
+          <div class="header__nav-right">
+            <button class="video-btn">
+              <i class="video-icon fas fa-video-plus"></i>
+              <span class="tooltip video">Create</span>
+            </button>
+            <button class="dots-btn">
+              <i class="th-icon fas fa-th"></i>
+              <span class="tooltip apps">YouTube apps</span>
+            </button>
+            <button class="bell-btn">
+              <i class="bell-icon fas fa-bell"></i>
+              <span class="tooltip bell" id="tooltip-bell">Notifications</span>
+            </button>
+            <button class="profile-btn">
+              <img class="profile-img" src="img/admin.PNG" alt="profile-img" />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <main class="main" id="main">
+      <!-- aside start -->
+      <aside class="sidenav">
+        <button class="sidenav__home-btn" title="Home">
+          <i class="home-icon active fas fa-home-alt"></i>
+          <span class="btn-description active">Home</span>
+        </button>
+        <button class="sidenav__explore-btn" title="Explore">
+          <i class="explore-icon fas fa-compass"></i>
+          <span class="btn-description">Explore</span>
+        </button>
+        <button class="sidenav__subs-btn" title="Subscriptions">
+          <i class="subs-icon fab fa-google-play"></i>
+          <span class="btn-description">Subscriptions</span>
+        </button>
+        <button class="sidenav__library-btn" title="Library">
+          <i class="library-icon fab fa-youtube"></i>
+          <span class="btn-description">Library</span>
+        </button>
+      </aside>
+      <!-- aside end -->
+
+      <!-- banner start -->
+      <section class="banner" id="banner">
+        <div class="container-fluid">
+          <div class="row">
+            <span class="banner__wrapper">
+              <img
+                class="banner__img"
+                src="img/freecodecamp-icon.jpeg"
+                alt=""
+              />
+              <a href="#" class="banner__media"> media icons</a>
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- banner end -->
+
+      <!-- profile start -->
+      <section class="profile">
+        <div class="profile__wrapper">
+          <div class="container">
+            <div class="profile__wrapper-box">
+              <div class="profile__self">
+                <img class="profile__img" src="img/profile-img.jpg" alt="" />
+                <div class="profile__text">
+                  <h5 class="profile__name">freeCodeCamp.org</h5>
+                  <p class="profile__owner">3.87M subscribers</p>
+                </div>
+              </div>
+              <div class="profile__button">
+                <button id="bellBtn" onclick="showHideSubs()" class="subscribe">
+                  Subscribe
+                </button>
+                <div id="bell" class="bell">
+                  <i class="far fa-bell"></i>
+                </div>
+              </div>
+            </div>
+            <ul
+              class="profile__tabs-wrapper nav nav-pills mb-3"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="profile__tab-btn nav-link active"
+                  id="pills-home-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-home"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  Home
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="profile__tab-btn nav-link"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Videos
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="profile__tab-btn nav-link"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Playlists
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="profile__tab-btn nav-link"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Community
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="profile__tab-btn nav-link"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Channels
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="profile__tab-btn nav-link"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  About
+                </button>
+              </li>
+              <span class="profile__search">
+                <i
+                  class="fal fa-search"
+                  id="search-icon"
+                  onclick="showHideSearch()"
+                ></i>
+                <input type="text" id="search-input" placeholder="Search" />
+              </span>
+            </ul>
+          </div>
+        </div>
+        <div class="profile__tabs">
+          <div class="container">
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+              >
+                <div class="profile__gallery-wrapper row">
+                  <div class="profile__gallery">
+                    <h3 class="profile__gallery-title">Uploads</h3>
+                    <a href="#" class="profile__gallery-play">
+                      <i class="fas fa-play"></i>
+                      <h4 class="profile__gallery-desc">Play all</h4>
+                    </a>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="profile__gallery-wrapper row">
+                  <div class="profile__gallery">
+                    <h3 class="profile__gallery-title">Uploads</h3>
+                    <a href="#" class="profile__gallery-play">
+                      <i class="fas fa-play"></i>
+                      <h4 class="profile__gallery-desc">Play all</h4>
+                    </a>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profile__video">
+                    <div class="profile__self-wrapper">
+                      <a href="video.html" class="profile__link">
+                        <img
+                          class="profiles__self-img"
+                          src="img/freecodecamp.jpeg"
+                          alt=""
+                        />
+                      </a>
+                      <div class="profile__desc">
+                        <div class="profile__text">
+                          <h5 class="profile__title">
+                            Responsive Website Design Using HTML CSS And..
+                          </h5>
+                          <p class="profile__owner">233K views 1 month ago</p>
+                          <span class="profile__views"> Subtitles </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-contact"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+              >
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- profile end -->
+    </main>
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- main js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

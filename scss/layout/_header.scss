@@ -1,0 +1,147 @@
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background-color: $headerBg;
+}
+
+.header__nav {
+  @include flex;
+  justify-content: unset;
+  flex-direction: unset;
+  padding: 13px 0;
+  margin: 0 13px;
+}
+
+.header__nav-left {
+  display: flex;
+}
+
+.bars-icon {
+  font-size: 18px;
+  width: 16px;
+}
+
+.header__logo {
+  margin-left: 29px;
+  color: white;
+  background: #ca0000;
+  padding: 4px 10px;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.header__nav-center {
+  margin: 0 auto;
+  display: flex;
+}
+
+.header__nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn,
+.microphone-btn,
+.video-btn,
+.dots-btn,
+.bell-btn {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  top: 45px;
+  background: #4b4b4be0;
+  padding: 5px;
+  font-size: 13px;
+  color: #ffffff;
+  display: none;
+}
+
+.search-btn:hover .tooltip,
+.microphone-btn:hover .tooltip,
+.video-btn:hover .tooltip,
+.dots-btn:hover .tooltip,
+.bell-btn:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
+
+#tooltip-bell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  width: 500px;
+  line-height: 28px;
+  padding: 0 10px;
+  border: 1px solid $borderColor;
+  color: #ffffff;
+}
+
+.search-input:focus {
+  border: 0.5px solid $inputBorderColor;
+  outline: none;
+}
+
+.search-icon {
+  font-size: 14px;
+  background: #313131;
+  padding: 9px 28px;
+  color: #6f6f6f;
+  transition: 0.2s ease-in-out;
+}
+
+.search-icon:hover {
+  color: #929292;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+.tooltip.mic {
+  top: 45px;
+  right: -71px;
+  width: 155px;
+}
+
+.microphone-btn,
+.video-btn,
+.bell-btn,
+.dots-btn {
+  margin-left: 26px;
+  font-size: 19px;
+}
+
+.video-btn {
+  margin-left: unset;
+}
+
+.microphone-btn {
+  width: 50px;
+  margin-left: unset;
+}
+
+.tooltip.video {
+  right: -18px;
+}
+
+.tooltip.apps,
+.tooltip.bell {
+  right: -42px;
+  width: 105px;
+}
+
+.profile-img {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  margin-left: 20px;
+  object-fit: cover;
+}

@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  vertical-align: baseline;
+  font-family: "Roboto Regular";
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: $primaryBgColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.container-fluid {
+  padding: 0 15px;
+}
+
+input {
+  background-color: $inputBgColor;
+  outline: none;
+  border: none;
+}
+
+i {
+  color: $white;
+}
